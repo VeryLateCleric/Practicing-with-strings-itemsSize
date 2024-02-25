@@ -1,0 +1,26 @@
+
+In this lesson we learn about substring which works as follows:
+
+<!-- function sentenceCase(sentence) {
+
+  const first = sentence.substring(0, 1);
+
+  const rest = sentence.substring(1);
+
+
+  return first.toUpperCase() + rest.toLowerCase();
+
+} -->
+
+substring() returns the part of the string from the start index up to but exluciding the end index, or to the end if no end index is supplied.
+    The index of the first character to include in the substring
+
+    The index of the first character to exclude from the substring (optional)
+
+The above function works as follows:
+
+    It sets the first variable to be equal to only the first character. In other words, substring(0, 1) means that the substring will begin on index 0 and will exclude the rest of the text starting on index 1. For example, "hello".substring(0, 1) returns h, and "hello".substring(0, 2) returns he.
+
+    It sets the rest variable to be equal to every character starting from the first index. If you do not include a second argument, like in substring(1), the substring will consist of every character following the given index. For example, "hello".substring(1) returns ello.
+
+    It joins the two strings together, using toUpperCase() and toLowerCase() as appropriate.

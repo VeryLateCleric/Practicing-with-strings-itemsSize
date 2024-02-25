@@ -16,3 +16,44 @@ function sentenceCase(sentence) {
     return result;
 //   return result pretty sure
   }
+
+/*
+  Complete the function below according to the instructions.
+  
+  When the function's parameters reference `products`, they are referencing an array of objects. Each object has the following shape:
+   {
+     name: "Slip Dress",
+     priceInCents: 8800,
+     availableSizes: [ 0, 2, 4, 6, 10, 12, 16 ]
+   }
+*/
+function listAllItems(products) {
+    for (let i = 0; i < products.length; i++) {
+      const itemForSale = products[i];
+  
+      console.log(`Name ${i + 1}:${itemForSale.name}`); // item num and name
+      console.log(`Price: ${itemForSale.priceInCents}`); //  price in cents TODO: show in dollars
+      console.log(`Available Sizes: ${itemForSale.availableSizes}`);
+      
+      const availableSizes = itemForSale.availableSizes;
+      const firstSize = availableSizes[0];
+      const lastSize = availableSizes[availableSizes.length - 1];
+
+      console.log(`Available Sizes: ${firstSize}-${lastSize}`);
+
+ 
+    }
+  }
+  
+  
+  const exampleArray = [
+    { name: "Nonslip Dress", priceInCents: 4400, availableSizes: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44] },
+    { name: "Cool Dress", priceInCents: 6000, availableSizes: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44] },
+    { name: "Hot Dress", priceInCents: 8000, availableSizes: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44] }
+  ]
+  //just normal dresses everyone wears
+  module.exports = {
+    listAllItems,
+  };
+  
+  listAllItems(exampleArray)
